@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/App.css';
 import './styles/global.css';
 import DiaryEdit from './DiaryEdit';
 
