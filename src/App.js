@@ -1,4 +1,5 @@
 import './App.css';
+import './styles/global.css';
 import DiaryEdit from './DiaryEdit';
 
 function App() {
