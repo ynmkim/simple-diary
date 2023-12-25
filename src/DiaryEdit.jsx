@@ -1,6 +1,9 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 const DiaryEdit = () => {
+  const authorInput = useRef();
+  const contentInput = useRef();
+
   const [state, setState] = useState({
     author: '',
     content: '',
@@ -16,8 +19,17 @@ const DiaryEdit = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(state);
-    alert('저장완료 ')
+
+    if (state.author.length < 1) {
+      authorInput.current.focus();
+      return;
+    }
+
+    if (state.content.length < 5) {
+      contentInput.current.focus();
+    }
+
+    alert('저장완료');
   };
 
   return (
@@ -31,6 +43,7 @@ const DiaryEdit = () => {
           name="author"
           value={state.author}
           onChange={handleChangeState}
+          ref={authorInput}
         />
       </div>
       <div>
@@ -40,7 +53,8 @@ const DiaryEdit = () => {
           name="content"
           value={state.content}
           onChange={handleChangeState}
-        ></textarea>
+          ref={contentInput}
+        />
       </div>
       <div>
         <select
