@@ -1,0 +1,58 @@
+.Container {
+  padding: 0 1.6rem;
+}
+
+.DiaryEdit {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 1.6rem;
+}
+
+.DiaryEdit h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.DiaryEdit label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.DiaryEdit input,
+textarea,
+select,
+option,
+button {
+  font-family: 'Pretendard';
+  font-size: 1.5rem;
+}
+
+.DiaryEdit input,
+textarea {
+  width: 100%;
+  padding: 1.6rem;
+}
+
+.DiaryEdit input,
+select,
+option {
+  height: 4rem;
+}
+
+.DiaryEdit textarea {
+  height: 28rem;
+}
+
+.DiaryEdit button {
+  position: fixed;
+  bottom: 1.6rem;
+  left: 1.6rem;
+  right: 1.6rem;
+  border: 0;
+  padding: 1.6rem;
+  cursor: pointer;
+  box-sizing: border-box;
+}

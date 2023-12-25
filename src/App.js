@@ -4,7 +4,7 @@ import DiaryEdit from './DiaryEdit';
 
 function App() {
   return (
-    <div className="App">
+    <div className="Container">
       <DiaryEdit />
     </div>
   );
