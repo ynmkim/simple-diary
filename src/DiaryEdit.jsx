@@ -34,7 +34,7 @@ const DiaryEdit = () => {
 
   return (
     <div className="DiaryEdit">
-      <h2>오늘의 일기</h2>
+      <h2 className="title">오늘의 일기</h2>
       <div>
         <label htmlFor="author">작성자</label>
         <input

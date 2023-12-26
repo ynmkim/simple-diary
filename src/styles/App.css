@@ -1,5 +1,15 @@
-.Container {
+.container {
   padding: 0 1.6rem;
+}
+
+.title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.description {
+  margin-bottom: 1.2rem;
 }
 
 .DiaryEdit {
@@ -7,12 +17,6 @@
   flex-direction: column;
   gap: 2rem;
   padding-top: 1.6rem;
-}
-
-.DiaryEdit h2 {
-  font-size: 2.6rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
 }
 
 .DiaryEdit label {
@@ -47,12 +51,45 @@ option {
 }
 
 .DiaryEdit button {
-  position: fixed;
+  /* position: fixed;
   bottom: 1.6rem;
   left: 1.6rem;
-  right: 1.6rem;
+  right: 1.6rem; */
   border: 0;
   padding: 1.6rem;
   cursor: pointer;
   box-sizing: border-box;
+}
+
+.DiaryList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.DiaryItem {
+  padding: 1.6rem;
+  background: rgb(239, 239, 239);
+}
+
+.DiaryItem .info {
+  padding-bottom: 1.2rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.4rem;
+}
+
+.emotion::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 11px;
+  margin: 0.1rem 0.8rem 0 0.8rem;
+  background-color: #000;
+  vertical-align: top;
+}
+
+.date {
+  display: block;
+  margin-top: 0.8rem;
 }
