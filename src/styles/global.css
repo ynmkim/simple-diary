@@ -136,8 +136,11 @@ table {
   font-style: normal;
 }
 
-html,
-body {
+html {
   font-family: 'Pretendard';
   font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
 }
