@@ -93,3 +93,7 @@ option {
   display: block;
   margin-top: 0.8rem;
 }
+
+.button-delete {
+  margin-top: 1.2rem;
+}
