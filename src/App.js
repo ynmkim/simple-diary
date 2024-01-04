@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import './styles/App.css';
 import './styles/global.css';
 import DiaryEdit from './DiaryEdit';
@@ -59,16 +59,15 @@ function App() {
     );
   };
 
-  const getDiaryAanlysis = () => {
-    console.log('분석 시작');
+  const getDiaryAanlysis = useMemo(() => {
     const goodCount = data.filter((item) => item.emotion >= 3).length;
     const badCount = data.length - goodCount;
     const goodRatio = (goodCount / data.length) * 100;
 
     return { goodCount, badCount, goodRatio };
-  };
+  }, [data.length]);
 
-  const { goodCount, badCount, goodRatio } = getDiaryAanlysis();
+  const { goodCount, badCount, goodRatio } = getDiaryAanlysis;
 
   return (
     <div className="container">
