@@ -1,17 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
+import { DiaryDispatchContext } from './App';
 
-const DiaryItem = ({
-  id,
-  author,
-  content,
-  emotion,
-  createdAt,
-  onRemove,
-  onEdit,
-}) => {
+const DiaryItem = ({ id, author, content, emotion, createdAt }) => {
   useEffect(() => {
     console.log(`${id}번째 일기 렌더`);
   });
+
+  const { onEdit, onRemove } = useContext(DiaryDispatchContext);
 
   const handleRemove = () => {
     if (window.confirm(`${id}번째 일기를 정말 삭제하시겠습니까?`)) {
