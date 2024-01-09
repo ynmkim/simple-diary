@@ -52,29 +52,27 @@ const DiaryItem = ({ id, author, content, emotion, createdAt }) => {
           <>{content}</>
         )}
       </div>
-      {isEdit ? (
-        <>
-          <button type="button" onClick={handleQuitEdit}>
-            수정 취소
-          </button>
-          <button type="button" onClick={handleEdit}>
-            수정 완료
-          </button>
-        </>
-      ) : (
-        <>
-          <button
-            className="button-delete"
-            type="button"
-            onClick={handleRemove}
-          >
-            삭제하기
-          </button>
-          <button type="button" onClick={toggleIsEdit}>
-            수정하기
-          </button>
-        </>
-      )}
+      <div className="button-group">
+        {isEdit ? (
+          <>
+            <button type="button" onClick={handleQuitEdit}>
+              수정 취소
+            </button>
+            <button type="button" onClick={handleEdit}>
+              수정 완료
+            </button>
+          </>
+        ) : (
+          <>
+            <button type="button" onClick={handleRemove}>
+              삭제하기
+            </button>
+            <button type="button" onClick={toggleIsEdit}>
+              수정하기
+            </button>
+          </>
+        )}
+      </div>
     </li>
   );
 };

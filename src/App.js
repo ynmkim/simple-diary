@@ -85,25 +85,11 @@ function App() {
     return { onCreate, onEdit, onRemove };
   }, []);
 
-  const getDiaryAanlysis = useMemo(() => {
-    const goodCount = data.filter((item) => item.emotion >= 3).length;
-    const badCount = data.length - goodCount;
-    const goodRatio = (goodCount / data.length) * 100;
-
-    return { goodCount, badCount, goodRatio };
-  }, [data.length]);
-
-  const { goodCount, badCount, goodRatio } = getDiaryAanlysis;
-
   return (
     <DiaryStateContext.Provider value={data}>
       <DiaryDispatchContext.Provider value={memoizedDispatches}>
         <div className="container">
           <DiaryEdit />
-          <div>전체 일기 : {data.length}</div>
-          <div>기분 좋은 일기: {goodCount}</div>
-          <div>기분 나쁜 일기: {badCount}</div>
-          <div>기분 좋은 일기 비율: {goodRatio}</div>
           <DiaryList />
         </div>
       </DiaryDispatchContext.Provider>
